@@ -9,17 +9,17 @@ conky.config = {
 
 	own_window_class = 'Conky',
 	own_window = true,
- own_window_type = 'dock', -- dock, desktop, panel 
+ 	own_window_type = 'dock', -- dock, desktop, panel 
 	own_window_transparent = true,
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 	own_window_argb_visual = true,
 
- alignment = 'tl',
+ 	alignment = 'tl',
 	border_inner_margin = 0,
 	border_outer_margin = 0,
 	minimum_width = 500,
- maximum_width = 500,
- minimum_height = 700,
+ 	maximum_width = 500,
+ 	minimum_height = 700,
 
 	draw_shades = false,
 	draw_outline = false,
