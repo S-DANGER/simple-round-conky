@@ -1,0 +1,57 @@
+conky.config = {
+	background = true,
+	double_buffer = true,
+	override_utf8_locale = true,
+
+	update_interval = 1,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	own_window_class = 'Conky',
+	own_window = true,
+ own_window_type = 'dock', -- dock, desktop, panel 
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_argb_visual = true,
+
+ alignment = 'tl',
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	minimum_width = 500,
+ maximum_width = 500,
+ minimum_height = 700,
+
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	use_xft = true,
+	--~ font = 'caviar dreams:size=14',
+	xftalpha = 0.9,
+	default_color = '#BBBBBB',
+
+-- Lua Load #
+	lua_load = '~/.conky/conky_dashboard.lua',
+	lua_draw_hook_pre = 'init_rings',
+};
+
+-- Syntax : ${STUFF}
+conky.text = [[
+${goto 185}${voffset 70}CPU
+${goto 77}${voffset 116}0
+${goto 79}${voffset -157}1
+${goto 200}${voffset -83}2
+${goto 317}${voffset 62}3
+
+${goto 182}${voffset 101}MEM
+
+${goto 192}${voffset 58}FS
+
+${goto 50}${voffset 21}enp2s0
+${goto 50}${voffset 1}${addr enp2s0}
+
+${goto 230}${voffset -59}wlp1s0
+${goto 230}${voffset 1}${addr wlp1s0}
+
+]];
